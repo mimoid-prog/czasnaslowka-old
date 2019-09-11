@@ -1,0 +1,472 @@
+/*LOGIN & SIGN-UP & FORGOT-PASSWORD-----------------------------*/
+.main-nav {
+    display: none;
+}
+
+.signup-form, .forgot-password-form, .close-btn {
+    display: none;
+}
+
+.login-form.active, .signup-form.active, .forgot-password-form.active{
+    display: block;
+}
+
+.get-to-account-box {
+    text-align: center;
+    background-color: #E0E0E0;
+    padding: 40px 20px;
+}
+
+.get-to-account-form h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.text-field {
+    width: 100%;
+    padding: 8px 0 8px 10px;
+    margin: 5px 0 20px 0;
+    display: inline-block;
+    border: none;
+    background-color: #FFFFFF;
+    font-size: 14px;
+    transition: all 150ms ease;
+}
+
+.text-field:focus {
+    border-right: 8px solid #EC4545;
+    outline: 0;
+}
+
+.submit-btn {
+    margin: 20px 0;
+}
+
+.remember-me {
+    font-size: 14px;
+    color: #3d3d3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remember-me-cb {
+    margin-right: 5px;
+}
+
+.forgot-password, .no-account {
+    color: #3d3d3d;
+}
+
+.no-account {
+    display: block;
+    margin: 0 auto;
+}
+
+.forgot-password {
+    margin-bottom: 10px;
+}
+
+.forgot-password-form h2 {
+    margin-bottom: 10px;
+}
+
+.forgot-password-form p {
+    margin-bottom: 20px;
+}
+
+.signup-info {
+    font-size: 14px;
+    color: #3d3d3d;
+}
+
+.no-account span {
+    color: #EC4545;
+}
+
+.errors-info {
+    margin-top: 15px;
+    color: #d31313;
+}
+
+.link-send {
+    display: none;  
+}
+
+.link-send.active {
+    display: block;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+@media (min-width: 650px) {
+    .main-nav {
+        display: block;
+    }
+    
+    .get-to-account-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: none;
+        z-index: 1;
+    }
+
+    .get-to-account-modal::after {
+        content: '';
+        background-color: #000000;
+        opacity: 0.6;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .get-to-account-modal.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .get-to-account-box {
+        padding: 40px 40px 60px;
+        background-color: #FFFFFF;
+        width: 475px;
+        position: relative;
+        z-index: 2;
+        animation: scale-appear 0.6s;
+    }
+
+    .login-form, .signup-form, .forgot-password-form {
+        display: none;
+    }
+
+    .text-field {
+        width: 100%;
+        padding: 10px 15px;
+        margin: 5px 0 22px 0;
+        background-color: #f1f1f1;
+        border-radius: 0;
+        font-size: 16px;
+    }
+
+    .signup-info {
+        margin: 5px 0 25px;
+    }
+    
+    .submit-btn {
+        margin: 0;
+    }
+
+    .remember-me {
+        justify-content: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .forgot-password {
+        margin: 20px 0 0 0;
+    }
+
+    .forgot-password-form h2 {
+        margin-bottom: 20px;
+    }
+
+    .forgot-password-form p {
+        margin-bottom: 20px;
+    }
+
+    .close-btn {
+        display: block;
+        font-size: 30px;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        opacity: 0.7;
+        transition: all 250ms ease;
+    }
+
+    .close-btn:hover {
+        opacity: 1;
+    }
+    
+    .no-account {
+        display: none;
+    }
+    
+    .link-send {
+        padding: 25px;
+        padding-bottom: 0;
+    }
+
+}
+
+/*INTRO--------------------------*/
+
+.intro {
+    width: 100%;
+    position: relative;
+    background: url("../img/workplace.jpg") no-repeat top; 
+    background-size: 300%;
+}
+
+.intro-box {
+    color: #FFFFFF;
+    height: 550px;
+}
+
+.intro-text{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.intro-text h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-weight: 300;
+}
+
+.intro-text p:first-of-type {
+    margin-bottom: 20px;
+}
+
+.snake {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    width: 151px;
+    height: 30px;
+}
+
+@media (min-width: 650px) {
+    .intro {
+        background-size: 200%;
+        background-position: right;
+        background-attachment: fixed;
+    }
+    
+    .intro-box {
+        height: 650px;
+    }
+
+    .intro-text{
+        right: 0;
+        top: auto;
+        transform: translateY(0);
+        width: 50%;
+        height: 100%;
+        padding: 0 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .intro-text h2{
+        margin-bottom: 30px;
+        font-size: 34px;
+    }
+
+    .intro-text p {
+        font-size: 18px;
+    }
+    
+    .snake {
+        width: auto;
+        height: auto;
+        bottom: -22px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .intro {
+        background-size: 130%;
+    }
+    
+    .intro-text{
+        width: 40%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .intro-text h2{
+        font-size: 36px;
+    }
+    
+    .intro-text p {
+        line-height: 120%;
+    }
+}
+
+@media (min-width: 1350px) {
+    .intro-box {
+        height: 750px;
+    }
+    
+    .intro-text{
+        width: 500px;
+    }
+    
+    .intro-text h2{
+        font-size: 40px;
+    }
+
+    .intro-text p {
+        font-size: 20px;
+    }
+}
+/*INSTRUCTIONS--------------------------*/
+.instructions {
+    background-color: #c6c6c6;
+}
+
+.instructions-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.inst-title {
+    font-size: 20px;
+    margin-bottom: 25px;
+    padding: 0 20px;
+}
+
+.inst-img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto 65px;
+}
+
+.inst-img3 {
+    margin-bottom: 0;
+}
+
+.inst-img1 {
+    background: url("../img/inst1.png") no-repeat;
+    background-size: 150%;
+    background-position: 0% 80%;
+}
+
+.inst-img2 {
+    background: url("../img/inst2.png") no-repeat;
+    background-size: 150%;
+}
+
+.inst-img3 {
+    background: url("../img/inst3.png") no-repeat;
+    background-size: 150%;
+    background-position: center;
+}
+
+@media (min-width: 1000px) {
+    .instructions-box {
+        padding: 150px 0;
+        flex-direction: row;
+    }
+
+    .inst-element {
+        width: 225px;
+        margin-right: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    
+    .inst-element:last-of-type {
+        margin-right: 0;
+    }
+
+    .inst-title {
+        margin-bottom: 30px;
+    }
+
+    .inst-img {
+        height: 225px;
+        width: 100%;
+        margin: 0;
+    }
+    
+    .inst-img3 {
+        background-size: 130%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .inst-title {
+        font-size: 22px;
+    }
+    
+    .inst-element {
+        width: 275px;
+    }
+    
+    .inst-img {
+        height: 275px;
+    }
+
+}
+
+@media (min-width: 1400px) {
+    .inst-element {
+        width: 350px;
+        margin-right: 80px;
+    }
+       
+    .inst-title {
+        font-size: 22px;
+    }
+    
+    .inst-img {
+        height: 350px;
+    }
+
+}
+/*CTA--------------------------*/
+
+.cta {
+    display: none;
+}
+
+@media (min-width: 650px) {
+    .cta {
+        background-color: #444444;
+        display: block;
+    }
+
+    .cta-box {
+        padding: 35px 0;
+        text-align: center;
+    }
+
+    .login-cta {
+        color: #EC4545;
+    }
+    
+    .login-cta:hover, .login-cta:focus  {
+        color: #FFFFFF;
+    }
+
+    .signup-cta {
+        color: #444444;
+    }
+    
+    .signup-cta:hover, .signup-cta:focus {
+        background-color: #FFFFFF;
+    }
+}

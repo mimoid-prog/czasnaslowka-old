@@ -1,0 +1,384 @@
+/*SECTION 1 - START LEARNING-----------------------------*/
+.learning-preferences {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.choose-set-of-words {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+}
+
+.way-of-learning {
+    flex-basis: 60%;
+}
+
+.start-box {
+    margin-left: auto;
+    order: 2;
+    flex-basis: 40%;
+    padding-left: 10px;
+    height: 81px;
+}
+
+.start-button {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    font-size: 20px;
+}
+
+.banner-small {
+    padding: 10px 0 10px 10px;
+    font-size: 18px;
+}
+
+.learning-preferences select {
+    height: 40px;
+    width: 100%;
+    border-color: #f1f1f1; 
+    background-color: #f1f1f1;
+    padding-left: 10px;
+}
+
+
+/*--------------*/
+
+.give-and-see-answer-box {
+    margin-top: 70px;
+    visibility: hidden;
+    transform: scale(0);
+    transition: all 0.6s ease;
+    text-align: center;
+}
+
+.give-and-see-answer-box.active {
+    visibility: visible; 
+    transform: scale(1);
+}
+
+.give-answer, .give-answer2{
+    display: none;
+    margin-bottom: 50px;
+}
+
+.give-answer.active, .give-answer2.active {
+    display: block;
+    animation: scale-appear 0.6s;
+}
+
+.others-words {
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.random-word-box {
+    padding: 30px 0;
+    border-bottom: 1px solid #c4c4c4;
+    border-top: 1px solid #c4c4c4;
+}
+
+.random-word.disable {
+    visibility: hidden;
+}
+
+.known-btn, .unknown-btn, .check-btn {
+    color: #FFFFFF;
+    font-weight: 300;
+    padding: 10px 0;
+    margin-top: 15px;
+    width: 45%;
+    transition: all 200ms ease;
+}
+
+.known-btn {
+    background-color: #4ba851;
+    margin-right: 5px;
+}
+
+.unknown-btn {
+    background-color: #db3f3f;
+    margin-left: 5px;
+}
+
+.check-btn {
+    background-color: #ffa128;
+}
+
+.check-btn:hover {
+    background-color: #ff9000;
+}
+
+.known-btn:hover{
+    background-color: #2ea035;
+}
+
+.unknown-btn:hover {
+    background-color: #db2929;
+}
+
+.write-answer-box {
+    padding: 30px 0;
+    background-color: #f1f1f1;
+}
+
+.write-answer {
+    width: 50%;
+    border: none;
+    text-align: center;
+    background: none;
+    border-bottom: 1px solid #c4c4c4;
+    transition: all 200ms ease;
+}
+
+.write-answer:focus {
+    width: 70%;
+}
+
+.answers {
+    height: 216px;
+}
+
+.answers.active {
+    overflow: hidden; 
+    overflow-y: scroll;
+}
+
+.answers-box p {
+    font-size: 14px;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+.answers li {    
+    border-bottom: 1px solid #FFFFFF;
+    padding: 8px 10px;
+}
+
+.proper-answer {
+    animation: opacity-appear 0.3s;
+}
+
+.correct {
+    background-color: #97db97;
+}
+
+.incorrect {
+    background-color: #db9797;
+}
+
+.give-answer p, .keys {
+    display: none;
+}
+
+@media (min-width: 500px) { 
+    .way-of-learning {
+        flex-basis: 75%;
+    }
+
+    .start-box {
+        flex-basis: 25%;
+    }
+    
+    .give-answer p {
+        color: #ffa128;
+        display: block;
+    }
+    
+    .keys {
+        display: block;
+        width: 100%;
+    }
+    
+    .keys::after {
+        content:'';
+        clear: both;
+    }
+    
+    .keys div {
+        float: left;
+        width: 50%;
+    }
+    
+    .keys div:first-of-type {
+        text-align: right;
+        padding-right: 10px;
+        color: #4ba851;
+    }
+    
+    .keys div:last-of-type {
+        text-align: left;
+        padding-left: 10px;
+        color: #db3f3f;
+    }
+}
+
+@media (min-width: 700px) { 
+    .start-learning-box {
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 1200px) {   
+    .start-learning {
+        width: 75%;
+    }
+
+    .give-answer-box {
+        font-size: 17px;
+    }
+
+    .start-learning-box {
+        max-width: 85%;
+    }
+
+    .learning-preferences {
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .choose-set-of-words select, .way-of-learning select {
+        padding-left: 10px;
+    }
+
+    .choose-set-of-words {
+        margin-bottom: 0;
+        flex-basis: 100%;
+    }
+
+    .way-of-learning {
+        flex-basis: 80%;
+        padding-left: 15px;
+    }
+
+    .start-box {
+        padding-left: 15px; 
+        flex-basis: auto;
+        height: auto;
+    }
+
+    .banner-small {
+        font-size: 20px;
+    }
+
+    .start-button {
+        height: 100%;
+        width: auto;
+        font-size: 26px;
+        padding: 10px 20px;
+    }
+
+    .known-btn, .unknown-btn, .check-btn {
+        width: 30%;
+    }
+
+    .others-words, .answers-box p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1350px) { 
+    .give-and-see-answer-box {
+        margin-top: 80px;
+        display: flex;
+    }
+
+    .give-answer-box {
+        width: 60%;
+        font-size: 18px;
+    }
+
+    .answers-box {
+        width: 40%;
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .known-btn, .unknown-btn, .check-btn {
+        width: 35%;
+    }
+
+    .known-btn {
+        margin-right: 15px;
+    }
+
+    .write-answer {
+        border-bottom: 1px solid #afafaf;
+        width: 35%;
+    }
+
+    .write-answer:focus {
+        width: 55%;    
+    }
+
+    .answers {
+        height: 315px;
+    }
+
+    .answers-box p {
+        text-align: center;
+    }
+}
+
+/*SECTION 2 - INFORMATION------------------------------*/
+
+.information {
+    background-color: #DEDDDD;
+}
+
+.information-box {
+    visibility: hidden;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+.information-box.active {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.result {
+    text-align: center;
+    font-size: 26px;
+}
+
+.chart-and-timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chart-box {
+    width: 225px;
+}
+
+.timer {
+    width: 100px;
+    height: 100px;
+    background-color: #353535;
+    border-radius: 50%;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+@media (min-width: 1200px) {
+    .information {
+        width: 25%;
+    }   
+
+    .information-box {
+        min-height: 700px;
+    }
+
+    .timer {
+        font-size: 20px;
+    }
+
+}

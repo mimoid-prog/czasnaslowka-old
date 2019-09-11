@@ -1,0 +1,354 @@
+/*SECTION 1 - MY WORDS-----------------------------*/
+
+.my-words {
+    background-color: #FFFFFF;
+    color: #383838;
+}
+
+.my-words-box {
+    position: relative;
+}
+
+.list-of-sets li{
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px 0 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.flag-and-name {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.flag-of-set {
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 25px;
+}
+
+.name-of-set {
+    font-weight: 300;
+}
+
+.edit-delete-box {
+    margin: 0 20px 0 auto;
+    display: flex;    
+}
+
+.edit, .delete {
+    border: none;
+    padding: 0;
+    background: none;
+    color: #6d6d6d;
+    padding: 5px 10px;
+    display: block;
+    transition: all 250ms ease;
+}
+
+.edit {
+    margin-right: 5px;
+}
+
+.edit:hover,.edit:focus, .delete:hover, .delete:focus{
+    color: #333333;
+}
+
+.add-new-set {
+    display: block;
+    margin: 20px auto 0;
+}
+
+/*----------------*/
+
+#delete-set-confirm {
+    visibility: hidden;
+    transform: scale(0);
+    position: absolute;
+    right: 15px;
+    text-align: center;  
+    max-width: 250px;
+    transition: all 250ms ease;
+}
+
+#delete-set-confirm.active {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.speech-bubble {
+    position: relative;
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+    border-radius: 40px 0 40px 0px;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 24px solid transparent;
+    border-bottom-color: #f1f1f1;
+    border-top: 0;
+    border-right: 0;
+    margin-left: -13.5px;
+    margin-top: -24px;
+}
+
+#delete-set-confirm p {
+    margin-bottom: 20px;
+}
+
+.delete-set-btn {
+    color: #EC4545;
+    margin-right: 30px;
+}
+
+.cancel-delete-set-btn {
+    font-weight: 300;
+}
+
+@keyframes scale-appear {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+@media (min-width: 600px) {
+    .flag-of-set {
+        width: 30px;
+    }
+    
+    .name-of-set {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 700px) {
+    .my-words-box {
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .my-words {
+        width: 55%;
+    }
+    
+    .my-words-box {
+        max-width: 85%;
+    }
+    
+    .my-words h1 {
+        padding-left: 30px;
+    }
+    
+    .add-new-set {
+        margin: 20px 0 0 30px;
+    }
+}
+
+
+
+/*SECTION 2 - EDIT WORDS------------------------------*/
+.edit-words-box {
+    visibility: hidden;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+.edit-words-box.active {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.edit-words {
+    background-color: #DEDDDD;
+}
+
+.edit-words-elements {
+    margin-top: 10px;
+}
+
+.edit-words-language, .edit-words-words { 
+    margin-top: 15px;
+}
+
+.edit-words-words-title-box {
+    width: 100%;
+    display: flex;
+}
+
+.edit-words-words-title {
+    width: 50%;
+}
+
+.words {
+    width: 100%;
+    height: 240px;
+}
+
+.words li {
+    width: 100%;
+}
+
+.words.active {
+    overflow: hidden; 
+    overflow-y: scroll;
+}
+
+.foreign-word, .polish-word {
+    width: 50%;
+    padding: 0 5px;
+    height: 30px;
+    border: none;
+}
+
+.polish-word {
+    border-left: 1px solid #e2e2e2;
+}
+
+.words li:nth-child(odd) input {
+    background-color: #f7f7f7;
+}
+
+.edit-words-element-title {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.edit-words-name input {
+    width: 100%;
+    border: none;
+    padding-left: 5px;
+    height: 30px;
+}
+
+.edit-words-language select {
+    border-color: #FFFFFF;
+    width: 125px;
+    height: 30px;
+}
+
+.save-and-cancel {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#save {
+    margin-right: 10px;
+}
+
+.information {
+    margin-top: 20px;
+    text-align: center;
+    color: #d80202;
+}
+
+.loader {
+    border: 4px solid #e8e8e8;
+    border-top: 4px solid #EC4545;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+.loader.active {
+    display: block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.set-errors-info {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.set-errors-info.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (min-width: 700px) {
+    .edit-words-box {
+        max-width: 600px;
+    }
+    
+    .edit-words-name {
+        width: 75%;
+    }
+    
+    .edit-words-name, .edit-words-language {
+        display: inline-block;
+    }
+    
+    .edit-words-language {
+        width: 22%;
+        float: right;
+        margin-top: 0;
+    }
+    
+    .edit-words-language select {
+        width: 100%;
+    }   
+}
+
+@media (min-width: 1200px) {
+    .edit-words {
+        width: 45%;
+    }
+
+    .edit-words-box {
+        max-width: 85%;
+    }
+    
+    .edit-words h1 {
+        margin-left: 30px;
+    }
+    
+    .edit-words-elements {
+        margin-left: 30px;
+    }
+    
+    .edit-words-name {
+        width: 60%;
+        margin-right: 10px;
+    }
+    
+    .edit-words-name input, .edit-words-language select, .foreign-word, .polish-word{
+        height: 32px;
+    }
+    
+    .edit-words-language {
+        width: 120px;
+        float: none;
+    }
+
+    .edit-words-words {
+        margin-top: 25px;
+    }
+    
+    .words {
+        height: 256px;    
+    }
+    
+    .save-and-cancel {
+        margin: 20px 0 0 30px;
+        text-align: left;
+    }
+    
+    .information {
+        margin: 20px 0 0 30px;
+        font-size: 18px;
+        text-align: left;
+    }
+}
