@@ -1,3 +1,7 @@
+<?php 
+	require('php/createDatabase.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
     <head>
