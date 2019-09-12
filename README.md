@@ -3,4 +3,4 @@
 
 # setup
 1.Install XAMPP
-2.Configure database.php and createDatabse.php
+2.Configure database.php and createDatabase.php
